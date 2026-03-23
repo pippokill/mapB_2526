@@ -23,6 +23,7 @@ public class Quadrato extends Rettangolo {
      *
      * @return
      */
+    @Override
     public String toString() {
         return "Quadrato di lato " + dim1;
     }

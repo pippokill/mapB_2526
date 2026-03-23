@@ -38,12 +38,17 @@ public abstract class FiguraComp implements Figura, Comparable {
      */
     @Override
     public int compareTo(Object o) {
-        if (((Figura) o).area() == this.area()) {
-            return 0;
-        } else if (((Figura) o).area() < this.area()) {
-            return 1;
+        if (o instanceof Figura) {
+            if (((Figura) o).area() == this.area()) {
+                return 0;
+            } else if (((Figura) o).area() < this.area()) {
+                return 1;
+            } else {
+                return -1;
+            }
         } else {
-            return -1;
+            System.err.println("The argument is not a Figure.");
+            return -1000;
         }
     }
 
