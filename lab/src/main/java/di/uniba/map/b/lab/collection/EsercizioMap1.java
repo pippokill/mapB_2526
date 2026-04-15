@@ -41,25 +41,25 @@ public class EsercizioMap1 {
         }
         System.out.println(m.size() + " distinct words:");
         System.out.println(m);
-        
-        Set<String> ks=m.keySet();
-        for (String k:ks) {
-            System.out.println(k);
+
+        Set<String> ks = m.keySet();
+        for (String k : ks) {
+            System.out.println(k + ": " + m.get(k));
         }
-        
+
         Iterator<String> it = ks.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-        
+
         Collection<Integer> values = m.values();
-        for (Integer i:values) {
+        for (Integer i : values) {
             System.out.println(i);
         }
-        
+
         Set<Map.Entry<String, Integer>> entrySet = m.entrySet();
-        for (Map.Entry<String,Integer> e:entrySet) {
-            System.out.println(e.getKey()+"\t"+e.getValue());
+        for (Map.Entry<String, Integer> e : entrySet) {
+            System.out.println(e.getKey() + "\t" + e.getValue());
         }
     }
 }
