@@ -31,6 +31,7 @@ public class NumberException {
             double x = Double.parseDouble(args[0]);
             System.out.println("Il quadrato di " + args[0] + " è " + Math.pow(x, 2));
         } catch (NumberFormatException ex) {
+            System.err.println("Messaggio errore: "+ex.getMessage());
             System.err.println("Il parametro " + args[0] + " non è un numero.");
         } finally {
             System.out.println("Arrivederci!");
