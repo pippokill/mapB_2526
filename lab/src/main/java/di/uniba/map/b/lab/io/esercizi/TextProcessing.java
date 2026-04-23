@@ -40,6 +40,7 @@ public class TextProcessing {
                 line = line.toLowerCase();
             }
             Scanner scanner = new Scanner(line);
+            scanner.useDelimiter("\\W+");
             while (scanner.hasNext()) {
                 String token = scanner.next();
                 Integer v = count.get(token);
