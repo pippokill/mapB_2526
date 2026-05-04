@@ -47,7 +47,7 @@ public class JabberClient {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             // Flush automatico con PrintWriter:
             PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
                 out.println("prova " + i);
                 String str = in.readLine();
                 System.out.println(str);
