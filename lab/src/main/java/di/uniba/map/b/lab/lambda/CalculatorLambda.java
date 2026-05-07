@@ -30,6 +30,8 @@ public class CalculatorLambda {
 
         System.out.println("10 * 2 = " + myApp.operateBinary(10, 2, (a, b) -> a * b));
         System.out.println("10 / 2 = " + myApp.operateBinary(10, 2, (a, b) -> a / b));
+        
+        System.out.println("10^2 = "+myApp.operateBinary(10, 2, (a,b)-> {int c=1; for (int i=0;i<b;i++) c=c*a; return c;}));
 
     }
 
