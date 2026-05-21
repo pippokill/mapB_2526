@@ -13,6 +13,10 @@ public class TestCentrale {
 
     private static final int NUM_SENS = 10;
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             Centrale centrale = new Centrale("./resources/temperature.log");

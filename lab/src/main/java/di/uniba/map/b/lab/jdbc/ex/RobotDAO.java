@@ -49,6 +49,7 @@ public class RobotDAO {
     /**
      *
      * @return @throws SQLException
+     * @throws java.sql.SQLException
      */
     public List<Robot> getTuttiIRobot() throws SQLException {
         Statement stm = connection.createStatement();
@@ -65,6 +66,7 @@ public class RobotDAO {
     /**
      *
      * @return @throws SQLException
+     * @throws java.sql.SQLException
      */
     public Robot getRobotPiuForte() throws SQLException {
         Statement stm = connection.createStatement();
@@ -118,6 +120,10 @@ public class RobotDAO {
         return winner;
     }
     
+    /**
+     *
+     * @throws SQLException
+     */
     public void cleanTable() throws SQLException {
         Statement stm = connection.createStatement();
         stm.executeUpdate("TRUNCATE TABLE robot");

@@ -14,6 +14,10 @@ import java.util.List;
  */
 public class ExBook {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Book b1 = new Book("ou4i3288w7re9w");
         b1.setTitle("titolo 1");

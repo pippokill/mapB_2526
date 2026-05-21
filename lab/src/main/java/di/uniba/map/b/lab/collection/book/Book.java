@@ -23,55 +23,108 @@ public class Book implements Comparable<Book> {
 
     private float price;
 
+    /**
+     *
+     * @param isbn
+     */
     public Book(String isbn) {
         this.isbn = isbn;
     }
 
+    /**
+     *
+     * @param isbn
+     * @param title
+     */
     public Book(String isbn, String title) {
         this.isbn = isbn;
         this.title = title;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIsbn() {
         return isbn;
     }
 
+    /**
+     *
+     * @param isbn
+     */
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title
+     */
     public void setTitle(String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return
+     */
     public Set<String> getAuthors() {
         return authors;
     }
 
+    /**
+     *
+     * @param authors
+     */
     public void setAuthors(Set<String> authors) {
         this.authors = authors;
     }
 
+    /**
+     *
+     * @return
+     */
     public Set<String> getGeneres() {
         return generes;
     }
 
+    /**
+     *
+     * @param generes
+     */
     public void setGeneres(Set<String> generes) {
         this.generes = generes;
     }
 
+    /**
+     *
+     * @return
+     */
     public float getPrice() {
         return price;
     }
 
+    /**
+     *
+     * @param price
+     */
     public void setPrice(float price) {
         this.price = price;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -79,6 +132,11 @@ public class Book implements Comparable<Book> {
         return hash;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -94,11 +152,20 @@ public class Book implements Comparable<Book> {
         return Objects.equals(this.isbn, other.isbn);
     }
 
+    /**
+     *
+     * @param t
+     * @return
+     */
     @Override
     public int compareTo(Book t) {
        return Float.compare(price, t.getPrice());
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Book{" + "isbn=" + isbn + ", title=" + title + ", price=" + price + '}';

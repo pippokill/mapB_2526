@@ -28,6 +28,10 @@ public class Esercizio2 {
 
     private static final int NUM_CANDIDATI = 1000;
 
+    /**
+     *
+     * @return
+     */
     public static Candidato generaCandidato() {
         Candidato c = new Candidato();
         c.setLivelloForza(rnd.nextInt(100) + 1);
@@ -41,6 +45,13 @@ public class Esercizio2 {
     }
 
     // Task 1
+
+    /**
+     *
+     * @param candidati
+     * @param predicate
+     * @return
+     */
     public static List<Candidato> filterBy(List<Candidato> candidati, Predicate<Candidato> predicate) {
         List<Candidato> r = new ArrayList<>();
         for (Candidato c : candidati) {
@@ -52,6 +63,13 @@ public class Esercizio2 {
     }
 
     // Task 2
+
+    /**
+     *
+     * @param candidati
+     * @param function
+     * @return
+     */
     public static double costoIngaggio(List<Candidato> candidati, Function<Candidato, Double> function) {
         double costo = 0;
         for (Candidato c : candidati) {
@@ -61,12 +79,22 @@ public class Esercizio2 {
     }
 
     // Task 3
+
+    /**
+     *
+     * @param candidati
+     * @param consumer
+     */
     public static void gridoDiBattaglia(List<Candidato> candidati, Consumer<Candidato> consumer) {
         for (Candidato c : candidati) {
             consumer.accept(c);
         }
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         List<Candidato> candidati = new ArrayList();
         for (int i = 0; i < NUM_CANDIDATI; i++) {

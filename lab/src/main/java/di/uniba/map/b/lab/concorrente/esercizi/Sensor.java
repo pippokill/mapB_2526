@@ -16,11 +16,19 @@ public class Sensor extends Thread {
 
     private final Centrale centrale;
 
+    /**
+     *
+     * @param centrale
+     * @param name
+     */
     public Sensor(Centrale centrale, String name) {
         super(name);
         this.centrale = centrale;
     }
 
+    /**
+     *
+     */
     @Override
     public void run() {
         int i = 0;

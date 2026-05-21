@@ -16,10 +16,20 @@ public class Centrale {
 
     private BufferedWriter writer;
 
+    /**
+     *
+     * @param logfilepath
+     * @throws IOException
+     */
     public Centrale(String logfilepath) throws IOException {
         writer = new BufferedWriter(new FileWriter(logfilepath));
     }
 
+    /**
+     *
+     * @param temp
+     * @throws IOException
+     */
     public synchronized void registraDato(double temp) throws IOException {
         sommaTemp += temp;
         rilevazioni++;
@@ -29,6 +39,10 @@ public class Centrale {
         }
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void close() throws IOException {
         writer.write(String.valueOf(sommaTemp / rilevazioni));
         writer.newLine();

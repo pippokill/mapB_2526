@@ -15,10 +15,21 @@ public class CalculatorLambda {
         int operation(int a, int b);
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @param op
+     * @return
+     */
     public int operateBinary(int a, int b, IntegerMath op) {
         return op.operation(a, b);
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         CalculatorLambda myApp = new CalculatorLambda();
 
